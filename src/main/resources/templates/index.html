@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>TProve Java</title>
+</head>
+<body>
+<div class="page-header">
+  <ul>
+  	<li><a href="/">Home</a></li>
+  	<li><a href="/listContainer">List current instances</a></li>
+  </ul>
+  <h1>Welcome to TProv</h1>
+
+  <br />
+
+  <p><b>TProv</b> or the Tomcat Provisioner is a app that demonstrates how to build a simple PAAS with Docker. It allows you to provision Tomcat applications in Docker containers.</p>
+
+  <p>This TProv java version was forked from <a href="https://github.com/jamtur01/dockerbook-code/tree/master/code/7/tprov_api">dockerbook-code tprov</a>.</p>
+</div>
+
+<h3>Add a new Tomcat Application</h3>
+
+<br />
+
+  <form action="/tomcat/create" method="post">
+    <h2>Tomcat Application for Maven Git Project</h2>
+
+    <br />
+
+    <label><b>Enter name of the Tomcat application.</b></label>
+    <input type="text" name="name" /><br />
+
+    <label><b>Enter the URL of a  git repository you wish to build and run.</b></label>
+    <input type="text" name="url" style="width: 600px;"/><br />
+    
+     <label><b>Enter the maven build parameter.</b></label>
+    <input type="text" name="buildParameter" style="width: 300px;"/><br />
+
+    <br />
+
+    <button type="submit" class="btn">Submit</button>
+  </form>
+<br />
+</body>
+</html>
